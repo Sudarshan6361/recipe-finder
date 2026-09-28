@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container nav">
+        <h1>🍳 Recipe Finder</h1>
+        <button id="favoritesBtn" class="favorite-btn">
+            ❤️ Favorites <span id="favoriteCount">0</span>
+        </button>
+    </div>
+</header>
+
+<main class="container">
+
+    
+    <section class="search-section">
+        <h2>Find Your Favorite Recipe</h2>
+        <p>Search delicious recipes by name or ingredient.</p>
+
+        <form id="searchForm" class="search-form">
+            <div class="form-group">
+                <label for="searchInput">Search Recipe</label>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Enter recipe name..."
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="categoryFilter">Category</label>
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Beef">Beef</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Pasta">Pasta</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Seafood">Seafood</option>
+                </select>
+            </div>
+
+            <button type="submit" class="search-btn">🔍 Search</button>
+        </form>
+    </section>
+
+    
+    <section class="history-section">
+        <h3>Recent Searches</h3>
+        <div id="searchHistory" class="history-list">
+            <p class="empty-message">No search history yet.</p>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="results-section">
+        <div class="section-heading">
+            <h2>Recipe Results</h2>
+            <button id="clearResults" class="clear-btn">Clear</button>
+        </div>
+
+        <div id="recipeContainer" class="recipe-grid">
+            <p class="empty-message">
+                Search for a recipe to see results.
+            </p>
+        </div>
+    </section>
+
+</main>
+
+
+<div id="recipeModal" class="modal">
+    <div class="modal-content">
+        <button id="closeModal" class="close-btn">&times;</button>
+
+        <img id="modalImage" src="" alt="Recipe">
+
+        <h2 id="modalTitle"></h2>
+
+        <div class="recipe-info">
+            <span id="modalCategory"></span>
+            <span id="modalArea"></span>
+        </div>
+
+        <section>
+            <h3>🥕 Ingredients</h3>
+            <ul id="modalIngredients"></ul>
+        </section>
+
+        <section>
+            <h3>👨‍🍳 Instructions</h3>
+            <p id="modalInstructions"></p>
+        </section>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Recipe Finder | Made with HTML, CSS & JavaScript</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
